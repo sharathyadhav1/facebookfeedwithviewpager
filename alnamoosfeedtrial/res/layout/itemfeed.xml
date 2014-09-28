@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/feed_bg" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/feed_item_margin"
+        android:layout_marginRight="@dimen/feed_item_margin"
+        android:layout_marginTop="@dimen/feed_item_margin"
+        android:background="@drawable/bg_parent_rounded_corner"
+        android:paddingBottom="@dimen/feed_item_padding_top_bottom" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/feedImage1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/nooflikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/feedImage1"
+            android:layout_marginLeft="10dp"
+            android:padding="@dimen/feed_item_padding"
+            android:src="@drawable/likeicon" />
+
+        <TextView
+            android:id="@+id/nooflikestext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feedImage1"
+            android:layout_toRightOf="@+id/nooflikes"
+            android:paddingBottom="@dimen/feed_item_padding"
+            android:paddingTop="@dimen/feed_item_padding"
+            android:text="sadasd" />
+
+        <TextView
+            android:id="@+id/timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/feedImage1"
+            android:padding="10dp"
+            android:text="timestamp"
+            android:textColor="@color/timestamp"
+            android:textSize="@dimen/feed_item_timestamp" />
+
+        <LinearLayout
+            android:id="@+id/textlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timestamp"
+            android:orientation="vertical"
+            android:padding="@dimen/feed_item_padding" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="@dimen/feed_item_text_padding"
+                android:text="TextView"
+                android:textColor="@color/textcolor"
+                android:textSize="@dimen/feed_item_text_size" />
+
+            <TextView
+                android:id="@+id/txtStatusMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="@dimen/feed_item_text_padding"
+                android:text="TextView"
+                android:textSize="@dimen/feed_item_text_small" />
+        </LinearLayout>
+        <LinearLayout
+             
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textlayout"
+            android:orientation="horizontal"
+            android:padding="@dimen/feed_item_padding" >
+
+            <ImageButton
+                android:id="@+id/readmorebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/readmorebtn" 
+                android:background="@null"
+                android:padding="@dimen/feed_item_padding"/>
+            <ImageButton
+                android:id="@+id/commentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/comment" 
+                android:layout_marginLeft="20dp"
+                android:background="@null"
+                android:padding="@dimen/feed_item_padding"/>
+            <ImageButton
+                android:id="@+id/likebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/likebtn" 
+                android:layout_marginLeft="2dp"
+                android:background="@null"
+                android:padding="@dimen/feed_item_padding"/>
+            <ImageButton
+                android:id="@+id/sharebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sharebtn" 
+                android:layout_marginLeft="2dp"
+                android:background="@null"
+                android:padding="@dimen/feed_item_padding"/>
+            
+            </LinearLayout>
+            
+    </RelativeLayout>
+
+</RelativeLayout>
